@@ -1,0 +1,199 @@
+---
+title: "Daniel White-Harris"
+subtitle: "Data Science Mananger Candidate"
+author: "🤖"
+institute: "Michigan State University"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(data/century_ride.jpg)
+background-size: cover
+
+```{r setup, include=FALSE}
+library(tidyverse)
+options(htmltools.dir.version = FALSE)
+```
+
+---
+# But what I really love...
+
+--
+### Is Data!
+
+```{r, echo=FALSE, fig.width = 8}
+library(gapminder)
+library(DT)
+
+df <- gapminder 
+gap <- df %>%
+  select(-country) %>%
+  group_by(continent, year) %>%
+  summarise_all(mean) %>%
+  mutate(across(lifeExp:gdpPercap, round)) %>%
+  arrange(year)
+
+DT::datatable(
+  head(gap, 20),
+  fillContainer = FALSE, 
+  options = list(pageLength = 7, dom ="ftip")) %>%
+  formatCurrency('gdpPercap')
+```
+
+
+---
+# And I really really love...
+
+--
+### Making cool data visualizations!
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=6}
+library(plotly)
+
+fig <- df %>%
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    size = ~pop, 
+    color = ~continent, 
+    frame = ~year, 
+    text = ~country, 
+    hoverinfo = "text",
+    type = 'scatter',
+    mode = 'markers',
+    fill = ~'',
+    marker = list(sizemode = 'diameter')
+  )
+fig <- fig %>% layout(
+    xaxis = list(
+      type = "log"
+    )
+  ) %>%
+  config(displayModeBar = FALSE)
+
+fig
+
+```
+
+---
+
+# But what I love most of all is...
+
+--
+
+### Solving problems with Data Products!
+
+
+![](data/data_products.jpeg)
+
+---
+class: inverse, center, middle
+
+# Data Products
+
+---
+
+# Data Products Can Be:
+
+--
+- Simple Reports
+
+
+- Fancy Machine Learning Models
+
+
+- Data Engineering Pipelines
+
+
+- Slick Dashboards
+
+
+- Databases
+
+
+- Rest API Services
+
+
+- Data Managment Tools
+
+
+- And so much more...
+
+--
+
+### Typically it is a combination of many these!
+
+---
+class: center, middle
+background-image: url(data/however.gif)
+
+---
+# What truly makes something a data product is that...
+
+
+> ... it facilitates an end goal through the use of data.
+
+> _\-D.J. Patil, Former U.S. Chief Data Scientist_<sup>1</sup>
+
+.footnote[
+[1] [Data Jujitsu: The art of turning data into product](http://radar.oreilly.com/2012/07/data-jujitsu.html)
+]
+
+<br/>
+<br/>
+
+--
+- The mere existence of one of the aforementioned items doesn't constitute a data product if it doesn't help facilitate a solution to a problem.
+
+
+--
+- A simple report that allows end users to be more productive, and make well-informed decisions, is a great data product. 
+
+
+--
+- A complicated artificial intelligence solution that can't seem to make it's way to production is not a data product. 
+
+---
+class: inverse, center, middle
+
+# Why is this important?
+
+---
+background-image: url(data/water.gif)
+class: center, bottom
+
+# Many Data Science projects start like this!
+
+---
+background-image: url(data/drinking_water.gif)
+class: center, bottom
+
+# But they end like this!
+
+---
+class: center, middle
+background-image: url(data/anchorman.gif)
+
+---
+class: inverse, center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+.footnote[
+Slides hosted on: [Rpubs](https://rpubs.com/dwh1142/msu_spartans)
+]
+
+```{r, eval=FALSE}
+install.packages("xaringan")
+
+```
+
+
