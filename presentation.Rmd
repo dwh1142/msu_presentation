@@ -19,6 +19,7 @@ background-size: cover
 ```{r setup, include=FALSE}
 library(tidyverse)
 options(htmltools.dir.version = FALSE)
+xaringanExtra::use_xaringan_extra(c("tile_view", "tachyons"))
 ```
 
 ---
@@ -102,6 +103,7 @@ class: inverse, center, middle
 # Data Products Can Be:
 
 --
+.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt2[
 - Simple Reports
 
 
@@ -124,7 +126,7 @@ class: inverse, center, middle
 
 
 - And so much more...
-
+]
 --
 
 ### Typically it is a combination of many these!
@@ -136,17 +138,16 @@ background-image: url(data/however.gif)
 ---
 # What truly makes something a data product is that...
 
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt1[
+... it facilitates an end goal through the use of data.
 
-> ... it facilitates an end goal through the use of data.
-
-> _\-D.J. Patil, Former U.S. Chief Data Scientist_<sup>1</sup>
+.tr[
+ — D.J. Patil, Former U.S. Chief Data Scientist<sup>1</sup>
+]]
 
 .footnote[
 [1] [Data Jujitsu: The art of turning data into product](http://radar.oreilly.com/2012/07/data-jujitsu.html)
 ]
-
-<br/>
-<br/>
 
 --
 - The mere existence of one of the aforementioned items doesn't constitute a data product if it doesn't help facilitate a solution to a problem.
@@ -185,29 +186,32 @@ class: inverse, center, middle
 # Lessons Learned
 
 --
-
-- Sometimes the end-user may not be ready for a fancy ML solution. And that's okay!
-
+.bg-light-gray.b--dark-gray.ba.bw2.br3.shadow-5.ph4.mt2[
+Sometimes the end-user may not be ready for a fancy ML solution. And that's okay!
+]
 --
-
-- Don't try to outperform a model or heuristic that already works!
-
+.bg-light-gray.b--dark-gray.ba.bw2.br3.shadow-5.ph4.mt2[
+Don't try to outperform a model or heuristic that already works!
+]
 --
-
-- Solve a problem that needs solving. Don't be a hammer looking for a nail. 
-
+.bg-light-gray.b--dark-gray.ba.bw2.br3.shadow-5.ph4.mt2[
+Solve a problem that needs solving. Don't be a hammer looking for a nail. 
+]
 --
-
-- Know when to stop trying something that isn't working, even if it is an unpopular decision!
-
+.bg-light-gray.b--dark-gray.ba.bw2.br3.shadow-5.ph4.mt2[
+Know when to stop something that isn't working, even if it is an unpopular decision!
+]
 --
+.bg-light-gray.b--dark-gray.ba.bw2.br3.shadow-5.ph4.mt2[
+Value people over processes!
+]
 
-- Value people over processes!
+---
+class: center, middle
 
---
-
-### Think about analytics in terms of data products, not simply _products that use data_, and you'll be well on your way to success!
-
+.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt2[
+## If you think about analytics and data science in terms of producing data products, and not simply _products that happen to use data_, you'll be well on your way to success!
+]
 ---
 class: center, middle
 background-image: url(data/anchorman.gif)
@@ -220,7 +224,7 @@ class: inverse, center, middle
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
 .footnote[
-Slides hosted at: [https://dwh1142.github.io/msu_presentation/presentation.html](https://dwh1142.github.io/msu_presentation/presentation.html)
+Slides hosted on [Github.io](https://dwh1142.github.io/msu_presentation/presentation.html)
 ]
 
 ```{r, eval=FALSE}
