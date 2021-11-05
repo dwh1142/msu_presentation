@@ -177,6 +177,38 @@ class: center, bottom
 # But they end like this!
 
 ---
+class: inverse, center, middle
+
+# Story time...
+
+---
+# Lessons Learned
+
+--
+
+- Sometimes the end-user may not be ready for a fancy ML solution. And that's okay!
+
+--
+
+- Don't try to outperform a model or heuristic that already works!
+
+--
+
+- Solve a problem that needs solving. Don't be a hammer looking for a nail. 
+
+--
+
+- Know when to stop trying something that isn't working, even if it is an unpopular decision!
+
+--
+
+- Value people over processes!
+
+--
+
+### Think about analytics in terms of data products, not simply _products that use data_, and you'll be well on your way to success!
+
+---
 class: center, middle
 background-image: url(data/anchorman.gif)
 
@@ -188,7 +220,7 @@ class: inverse, center, middle
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
 .footnote[
-Slides hosted on: [Rpubs](https://rpubs.com/dwh1142/msu_spartans)
+Slides hosted at: [https://dwh1142.github.io/msu_presentation/presentation.html](https://dwh1142.github.io/msu_presentation/presentation.html)
 ]
 
 ```{r, eval=FALSE}
